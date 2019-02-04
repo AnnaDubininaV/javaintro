@@ -6,14 +6,23 @@ public class WhileExample {
         int count = 1;
         int i = 1;
 
-            while (count < 16) {
+        while (count < 16) {
 
-                System.out.println("Номер числа:" + count + ", число" + i++ *7);
-                count++;
-
-
-            }
-
+            if (i%7==0){
+                System.out.println("Номер числа: " + count++ + " число: " + i++);
+            } else i++;
+        }
 
     }
 }
+
+//            while (count < 16){
+//                System.out.println("Номер числа:" + count + ", число" + i++ *7);
+//                count++;
+//
+//
+//            }
+
+
+
+
