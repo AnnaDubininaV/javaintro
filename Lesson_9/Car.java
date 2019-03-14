@@ -23,5 +23,4 @@ public class Car {
      int workingYears (){
         return 2019 - year;
      }
-
 }

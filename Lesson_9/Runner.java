@@ -1,7 +1,5 @@
 package Lesson_9;
 
-import java.lang.reflect.Array;
-
 public class Runner {
     public static void main(String[] args) {
 
