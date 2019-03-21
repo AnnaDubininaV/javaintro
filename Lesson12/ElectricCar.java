@@ -1,16 +1,21 @@
 package Lesson12;
 
 public class ElectricCar extends Car {
-    int batteryChargeTime;
+    private int batteryChargeTime;
 
-    ElectricCar (String typeOfEngine, String brand, String model, String color, int registerNumber, int price,
-                 int maxSpeed, double consumption, int batteryChargeTime) {
+    ElectricCar(String brand, String model, String color, int registerNumber, int price,
+                int maxSpeed, double consumption, int batteryChargeTime) {
 
-        super(typeOfEngine, brand, model, color, registerNumber, price, maxSpeed, consumption);
+        super(brand, model, color, registerNumber, price, maxSpeed, consumption);
         this.batteryChargeTime = batteryChargeTime;
     }
 
-    public String toString () {
-        return super.toString();
+    public String toString() {
+        return "ElectricCar [" + super.toString() + "; battery charge time: " + batteryChargeTime + "]";
+    }
+
+    public double getConsumption() {
+        super.setConsumption(0);
+        return super.getConsumption();
     }
 }
