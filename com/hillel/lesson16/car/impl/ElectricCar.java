@@ -1,9 +1,9 @@
-package Lesson12;
+package com.hillel.lesson16.car.impl;
 
 public class ElectricCar extends Car {
     private int batteryChargeTime;
 
-    ElectricCar(String brand, String model, String color, int registerNumber, int price,
+    public ElectricCar(String brand, String model, String color, int registerNumber, int price,
                 int maxSpeed, double consumption, int batteryChargeTime) {
 
         super(brand, model, color, registerNumber, price, maxSpeed, consumption);

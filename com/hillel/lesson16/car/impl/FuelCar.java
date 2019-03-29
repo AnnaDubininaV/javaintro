@@ -1,4 +1,4 @@
-package Lesson12;
+package com.hillel.lesson16.car.impl;
 
 abstract class FuelCar extends Car {
     private int tankCapacity;

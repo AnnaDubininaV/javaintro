@@ -1,6 +1,8 @@
-package Lesson12;
+package com.hillel.lesson16.car.impl;
 
-abstract class Car {
+import com.hillel.lesson16.car.ICar;
+
+public abstract class Car implements ICar {
 
     private String brand;
     private String model;

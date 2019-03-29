@@ -1,9 +1,12 @@
-package Lesson12;
+package com.hillel.lesson16.taxipark.impl;
 
-public class TaxiPark {
+import com.hillel.lesson16.car.impl.Car;
+import com.hillel.lesson16.taxipark.ITaxiPark;
+
+public class TaxiPark implements ITaxiPark {
     private Car[] taxiPark;
 
-    TaxiPark(Car[] taxiPark) {
+    protected TaxiPark(Car[] taxiPark) {
         this.taxiPark = taxiPark;
     }
 
@@ -30,7 +33,7 @@ public class TaxiPark {
         }
     }
 
-    Car[] findCarsBySpeed(int minSpeed, int maxSpeed) {
+    public Car[] findCarsBySpeed(int minSpeed, int maxSpeed) {
         Car[] carsBySpeed = null;
 
         for (Car car : taxiPark) {
