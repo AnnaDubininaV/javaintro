@@ -1,11 +1,14 @@
-package com.hillel.lesson16.taxipark.impl;
+package com.hillel.lesson16.runner;
 
 import com.hillel.lesson16.car.impl.*;
+import com.hillel.lesson16.exception.CarSearchException;
+import com.hillel.lesson16.taxipark.TaxiPark;
+import com.hillel.lesson16.taxipark.impl.TaxiParkImpl;
 
 public class TaxiParkRunner {
     public static void main(String[] args) {
 
-        Car[] listOfCars = new Car[]{
+        CarImpl[] listOfCars = new CarImpl[]{
                 new ElectricCar("NISSAN", "Leaf", "WHITE", 12345, 15000, 145, 15, 8),
                 new ElectricCar("TESLA", "S", "BLACK", 12346, 40000, 193, 23.8, 8),
                 new ElectricCar("BMW", "i3", "RED", 12347, 22000, 150, 12, 8),
@@ -17,7 +20,7 @@ public class TaxiParkRunner {
                 new PetrolCar("CITROEN", "C4", "ORANGE", 12353, 20000, 181, 7.1, 60, 95)
         };
 
-        TaxiPark taxiPark = new TaxiPark(listOfCars);
+        TaxiPark taxiPark = new TaxiParkImpl(listOfCars);
 
         System.out.println();
         System.out.println("The cost of Taxi park is: " + taxiPark.costOfCars() + "$\n");
@@ -27,10 +30,16 @@ public class TaxiParkRunner {
         System.out.println(taxiPark.toString());
 
         System.out.println("Cars by speed:");
-        Car[] carsBySpeed = taxiPark.findCarsBySpeed(0, 160);
 
-        for (Car car : carsBySpeed) {
-            System.out.println(car.toString());
+        try {
+            CarImpl[] carsBySpeed = taxiPark.findCarsBySpeed(40, -5);
+            for (CarImpl car : carsBySpeed) {
+                System.out.println(car.toString());
+            }
         }
+        catch (CarSearchException e) {
+            System.out.println("Caught: " + e);
+        }
+
     }
 }

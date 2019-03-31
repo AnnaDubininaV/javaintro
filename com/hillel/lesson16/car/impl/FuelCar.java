@@ -1,6 +1,6 @@
 package com.hillel.lesson16.car.impl;
 
-abstract class FuelCar extends Car {
+abstract class FuelCar extends CarImpl {
     private int tankCapacity;
 
     FuelCar(String brand, String model, String color, int registerNumber, int price, int maxSpeed,

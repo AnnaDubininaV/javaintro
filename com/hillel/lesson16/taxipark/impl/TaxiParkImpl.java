@@ -1,19 +1,20 @@
 package com.hillel.lesson16.taxipark.impl;
 
-import com.hillel.lesson16.car.impl.Car;
-import com.hillel.lesson16.taxipark.ITaxiPark;
+import com.hillel.lesson16.car.impl.CarImpl;
+import com.hillel.lesson16.exception.CarSearchException;
+import com.hillel.lesson16.taxipark.TaxiPark;
 
-public class TaxiPark implements ITaxiPark {
-    private Car[] taxiPark;
+public class TaxiParkImpl implements TaxiPark {
+    private CarImpl[] taxiPark;
 
-    protected TaxiPark(Car[] taxiPark) {
+    public TaxiParkImpl(CarImpl[] taxiPark) {
         this.taxiPark = taxiPark;
     }
 
     public int costOfCars() {
         int carParkCost = 0;
 
-        for (Car car : taxiPark) {
+        for (CarImpl car : taxiPark) {
             carParkCost += car.getPrice();
         }
         return carParkCost;
@@ -25,7 +26,7 @@ public class TaxiPark implements ITaxiPark {
             for (int j = 0; j < i; j++) {
                 if (taxiPark[j].getConsumption() > taxiPark[j + 1].getConsumption()) {
 
-                    Car temp = taxiPark[j];
+                    CarImpl temp = taxiPark[j];
                     taxiPark[j] = taxiPark[j + 1];
                     taxiPark[j + 1] = temp;
                 }
@@ -33,16 +34,18 @@ public class TaxiPark implements ITaxiPark {
         }
     }
 
-    public Car[] findCarsBySpeed(int minSpeed, int maxSpeed) {
-        Car[] carsBySpeed = null;
+    public CarImpl[] findCarsBySpeed(int minSpeed, int maxSpeed) throws CarSearchException {
+        if (maxSpeed < 0 | minSpeed < 0 | maxSpeed < minSpeed)
+            throw new CarSearchException(minSpeed, maxSpeed);
+        CarImpl[] carsBySpeed = null;
 
-        for (Car car : taxiPark) {
+        for (CarImpl car : taxiPark) {
             if (car.getMaxSpeed() <= maxSpeed & car.getMaxSpeed() >= minSpeed) {
                 if (carsBySpeed == null) {
-                    carsBySpeed = new Car[1];
+                    carsBySpeed = new CarImpl[1];
                     carsBySpeed[0] = car;
                 } else {
-                    Car[] tempCars = new Car[carsBySpeed.length + 1];
+                    CarImpl[] tempCars = new CarImpl[carsBySpeed.length + 1];
 
                     for (int i = 0; i < carsBySpeed.length; i++) {
                         tempCars[i] = carsBySpeed[i];

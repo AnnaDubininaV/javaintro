@@ -1,6 +1,6 @@
 package com.hillel.lesson16.car;
 
-public interface ICar {
+public interface Car {
 
     int getPrice();
 

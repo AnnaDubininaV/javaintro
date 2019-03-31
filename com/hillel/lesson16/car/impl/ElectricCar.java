@@ -1,6 +1,6 @@
 package com.hillel.lesson16.car.impl;
 
-public class ElectricCar extends Car {
+public class ElectricCar extends CarImpl {
     private int batteryChargeTime;
 
     public ElectricCar(String brand, String model, String color, int registerNumber, int price,

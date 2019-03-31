@@ -1,8 +1,8 @@
 package com.hillel.lesson16.car.impl;
 
-import com.hillel.lesson16.car.ICar;
+import com.hillel.lesson16.car.Car;
 
-public abstract class Car implements ICar {
+public abstract class CarImpl implements Car {
 
     private String brand;
     private String model;
@@ -12,7 +12,7 @@ public abstract class Car implements ICar {
     private int maxSpeed;
     private double consumption;
 
-    Car (String brand, String model, String color, int registerNumber, int price, int maxSpeed, double consumption) {
+    CarImpl(String brand, String model, String color, int registerNumber, int price, int maxSpeed, double consumption) {
         this.brand = brand;
         this.model = model;
         this.color = color;

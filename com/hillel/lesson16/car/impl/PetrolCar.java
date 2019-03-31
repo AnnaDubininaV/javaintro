@@ -11,6 +11,6 @@ public class PetrolCar extends FuelCar {
     }
 
     public String toString() {
-        return "PetrolCar [" + super.toString() + "; gasolineGrade: " + gasolineGrade + "]";
+        return "PetrolCar [" + super.toString() + "; gasolineGrade: " + gasolineGrade + "].";
     }
 }

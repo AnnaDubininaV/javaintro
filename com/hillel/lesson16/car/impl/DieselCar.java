@@ -11,7 +11,7 @@ public class DieselCar extends FuelCar {
     }
 
     public String toString() {
-        return "DieselCar [" + super.toString() + "; glow plug: " + glowPlug + "]";
+        return "DieselCar [" + super.toString() + "; glow plug: " + glowPlug + "].";
     }
 
 }
