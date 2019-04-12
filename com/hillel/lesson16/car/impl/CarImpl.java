@@ -28,6 +28,22 @@ public abstract class CarImpl implements Car {
                 + this.maxSpeed + "; consumption: " + this.consumption;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getRegisterNumber() {
+        return registerNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     public int getPrice () {
         return price;
     }

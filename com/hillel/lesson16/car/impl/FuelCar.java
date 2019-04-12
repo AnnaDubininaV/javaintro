@@ -1,7 +1,7 @@
 package com.hillel.lesson16.car.impl;
 
 abstract class FuelCar extends CarImpl {
-    private int tankCapacity;
+    private static int tankCapacity;
 
     FuelCar(String brand, String model, String color, int registerNumber, int price, int maxSpeed,
             double consumption, int tankCapacity) {
@@ -14,5 +14,7 @@ abstract class FuelCar extends CarImpl {
         return super.toString() + "; tankCapacity: " + tankCapacity;
     }
 
-
+    public static int getTankCapacity() {
+        return tankCapacity;
+    }
 }

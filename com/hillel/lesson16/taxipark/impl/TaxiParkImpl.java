@@ -58,7 +58,6 @@ public class TaxiParkImpl implements TaxiPark {
         return carsBySpeed;
     }
 
-
     public String toString() {
         int i = 0;
         String ok = "";

@@ -14,4 +14,5 @@ public interface Car {
 
     void setConsumption(double consumption);
 
+
 }

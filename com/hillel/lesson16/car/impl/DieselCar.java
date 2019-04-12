@@ -1,7 +1,7 @@
 package com.hillel.lesson16.car.impl;
 
 public class DieselCar extends FuelCar {
-    private int glowPlug;
+    private static int glowPlug;
 
     public DieselCar(String brand, String model, String color, int registerNumber, int price, int maxSpeed,
               double consumption, int tankCapacity, int glowPlug) {
@@ -14,4 +14,7 @@ public class DieselCar extends FuelCar {
         return "DieselCar [" + super.toString() + "; glow plug: " + glowPlug + "].";
     }
 
+    public static int getGlowPlug() {
+        return glowPlug;
+    }
 }

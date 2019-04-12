@@ -1,0 +1,10 @@
+ElectricCar [mark: NISSAN; model: Leaf; color: WHITE; register number: 12345; price: 15000; max speed: 145; consumption: 0.0; battery charge time: 8]
+ElectricCar [mark: TESLA; model: S; color: BLACK; register number: 12346; price: 40000; max speed: 193; consumption: 0.0; battery charge time: 8]
+ElectricCar [mark: BMW; model: i3; color: RED; register number: 12347; price: 22000; max speed: 150; consumption: 0.0; battery charge time: 8]
+DieselCar [mark: RENAULT; model: Sandero; color: BLUE; register number: 12348; price: 13200; max speed: 158; consumption: 3.9; tankCapacity: 60; glow plug: 4].
+DieselCar [mark: CITROEN; model: C-Eiysee; color: BLUE; register number: 12350; price: 18000; max speed: 160; consumption: 3.9; tankCapacity: 60; glow plug: 4].
+DieselCar [mark: KIA; model: Sportage; color: WHITE; register number: 12349; price: 25000; max speed: 177; consumption: 4.7; tankCapacity: 60; glow plug: 4].
+PetrolCar [mark: CITROEN; model: C4; color: ORANGE; register number: 12353; price: 20000; max speed: 181; consumption: 7.1; tankCapacity: 60; gasolineGrade: 95].
+PetrolCar [mark: DAEWOO; model: Lanos; color: GREEN; register number: 12352; price: 10000; max speed: 155; consumption: 7.2; tankCapacity: 60; gasolineGrade: 95].
+PetrolCar [mark: BMW; model: X1; color: BLACK; register number: 12351; price: 30000; max speed: 201; consumption: 8.4; tankCapacity: 60; gasolineGrade: 95].
+

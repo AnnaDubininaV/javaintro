@@ -1,7 +1,7 @@
 package com.hillel.lesson16.car.impl;
 
 public class ElectricCar extends CarImpl {
-    private int batteryChargeTime;
+    private static int batteryChargeTime;
 
     public ElectricCar(String brand, String model, String color, int registerNumber, int price,
                 int maxSpeed, double consumption, int batteryChargeTime) {
@@ -17,5 +17,9 @@ public class ElectricCar extends CarImpl {
     public double getConsumption() {
         super.setConsumption(0);
         return super.getConsumption();
+    }
+
+   public static int getBatteryChargeTime() {
+        return batteryChargeTime;
     }
 }

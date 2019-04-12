@@ -1,7 +1,7 @@
 package com.hillel.lesson16.car.impl;
 
 public class PetrolCar extends FuelCar {
-    private int gasolineGrade;
+    private static int gasolineGrade;
 
     public PetrolCar(String brand, String model, String color, int registerNumber, int price, int maxSpeed,
               double consumption, int tankCapacity, int gasolineGrade) {
@@ -12,5 +12,9 @@ public class PetrolCar extends FuelCar {
 
     public String toString() {
         return "PetrolCar [" + super.toString() + "; gasolineGrade: " + gasolineGrade + "].";
+    }
+
+    public static int getGasolineGrade() {
+        return gasolineGrade;
     }
 }

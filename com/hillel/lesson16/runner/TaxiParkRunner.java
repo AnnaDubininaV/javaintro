@@ -1,12 +1,20 @@
 package com.hillel.lesson16.runner;
 
+import com.hillel.lesson16.ReaderAndWriter;
 import com.hillel.lesson16.car.impl.*;
 import com.hillel.lesson16.exception.CarSearchException;
 import com.hillel.lesson16.taxipark.TaxiPark;
 import com.hillel.lesson16.taxipark.impl.TaxiParkImpl;
 
+
+import java.io.*;
+import java.lang.reflect.Array;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+
 public class TaxiParkRunner {
     public static void main(String[] args) {
+
 
         CarImpl[] listOfCars = new CarImpl[]{
                 new ElectricCar("NISSAN", "Leaf", "WHITE", 12345, 15000, 145, 15, 8),
@@ -28,18 +36,22 @@ public class TaxiParkRunner {
         System.out.println("Cars sorted by consumption:");
         taxiPark.sortByConsumption();
         System.out.println(taxiPark.toString());
+        ReaderAndWriter.printCarToFile(taxiPark, "CarsByConsumption.txt");
+
 
         System.out.println("Cars by speed:");
-
+        CarImpl[] carsBySpeed = null;
         try {
-            CarImpl[] carsBySpeed = taxiPark.findCarsBySpeed(40, -5);
+            carsBySpeed = taxiPark.findCarsBySpeed(40, 160);
+
             for (CarImpl car : carsBySpeed) {
                 System.out.println(car.toString());
             }
-        }
-        catch (CarSearchException e) {
+        } catch (CarSearchException e) {
             System.out.println("Caught: " + e);
         }
+
+        ReaderAndWriter.printCarToFile(carsBySpeed, "CarsBySpeed");
 
     }
 }

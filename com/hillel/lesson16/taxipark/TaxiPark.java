@@ -10,5 +10,4 @@ public interface TaxiPark {
     void sortByConsumption();
 
     CarImpl[] findCarsBySpeed(int minSpeed, int maxSpeed) throws CarSearchException;
-
 }
