@@ -13,5 +13,4 @@ public class CarSearchException extends Exception {
     public String toString() {
         return "CarSearchException [" + min + "," + max + "]";
     }
-
 }

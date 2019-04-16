@@ -14,5 +14,7 @@ public interface Car {
 
     void setConsumption(double consumption);
 
-
+    default String toFileFormat (){
+        return "";
+    }
 }

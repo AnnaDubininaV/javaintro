@@ -12,7 +12,7 @@ public abstract class CarImpl implements Car {
     private int maxSpeed;
     private double consumption;
 
-    CarImpl(String brand, String model, String color, int registerNumber, int price, int maxSpeed, double consumption) {
+   public CarImpl(String brand, String model, String color, int registerNumber, int price, int maxSpeed, double consumption) {
         this.brand = brand;
         this.model = model;
         this.color = color;
@@ -20,6 +20,11 @@ public abstract class CarImpl implements Car {
         this.price = price;
         this.maxSpeed = maxSpeed;
         this.consumption = consumption;
+    }
+
+    public  CarImpl (String [] carProperties){
+       this (carProperties [1], carProperties [2], carProperties [3], Integer.parseInt(carProperties [4]),
+               Integer.parseInt(carProperties [5]), Integer.parseInt(carProperties [6]), Double.parseDouble(carProperties [7]));
     }
 
     public String toString() {
@@ -67,4 +72,6 @@ public abstract class CarImpl implements Car {
     public void setConsumption(double consumption) {
         this.consumption = consumption;
     }
+
+
 }

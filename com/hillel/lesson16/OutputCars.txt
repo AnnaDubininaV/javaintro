@@ -1,0 +1,9 @@
+ElectricCar, NISSAN, Leaf, WHITE, 12345, 15000, 145, 0.0, 8;
+ElectricCar, TESLA, S, BLACK, 12346, 40000, 193, 0.0, 8;
+ElectricCar, BMW, i3, RED, 12347, 22000, 150, 0.0, 8;
+DieselCar, RENAULT, Sandero, BLUE, 12348, 13200, 158, 3.9, 50, 6;
+DieselCar, CITROEN, C-Eiysee, BLUE, 12350, 18000, 160, 3.9, 50, 4;
+DieselCar, KIA, Sportage, WHITE, 12349, 25000, 177, 4.7, 58, 6;
+PetrolCar, CITROEN, C4, ORANGE, 12353, 20000, 181, 7.1, 60, 95;
+PetrolCar, DAEWOO, Lanos, GREEN, 12352, 10000, 155, 7.2, 48, 92;
+PetrolCar, BMW, X1, BLACK, 12351, 30000, 201, 8.4, 63, 95

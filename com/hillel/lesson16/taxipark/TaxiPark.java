@@ -1,6 +1,6 @@
 package com.hillel.lesson16.taxipark;
 
-import com.hillel.lesson16.car.impl.CarImpl;
+import com.hillel.lesson16.car.Car;
 import com.hillel.lesson16.exception.CarSearchException;
 
 public interface TaxiPark {
@@ -9,5 +9,5 @@ public interface TaxiPark {
 
     void sortByConsumption();
 
-    CarImpl[] findCarsBySpeed(int minSpeed, int maxSpeed) throws CarSearchException;
+    Car[] findCarsBySpeed(int minSpeed, int maxSpeed) throws CarSearchException;
 }
